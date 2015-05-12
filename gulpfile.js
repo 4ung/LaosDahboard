@@ -9,6 +9,9 @@ var minifyCSS=require('gulp-minify-css');
 
 var del=require('del');
 
+var zip=require('gulp-zip');
+var run_squence=require('run-sequence');
+
  
 
 
@@ -88,16 +91,23 @@ gulp.task('assets',['clean'],function(){
 	gulp.src(path.assets)
 	.pipe(gulp.dest('build/assets/'));
 });
+
+
 //serving local server
 
 
+gulp.task('zip',function(){
+	console.log("Zip Created......................................................................................");
+	return gulp.src('build/*')
+		.pipe(zip('upload.zip'))
+		.pipe(gulp.dest('build'));
+});
 
 
 
 
 
-
-gulp.task('default', ['clean','Javascript','FragmentJavascript','style','fragments','mainhtml','manifest','map-data','assets'],function(){
+gulp.task('default',function(){
 
 	gulp.watch('./src/**/*.js',['Javascript']);
 	gulp.watch(path.fragmentjspath,['FragmentJavascript']);
@@ -106,7 +116,14 @@ gulp.task('default', ['clean','Javascript','FragmentJavascript','style','fragmen
 	gulp.watch('./src/**/*.jade',['fragments']);
 	gulp.watch(path.mainindexpath,['mainhtml']);		      
 	gulp.watch('./src/**/*.manifest',['manifest']);
+
+run_squence('clean','Javascript','FragmentJavascript','style','fragments','mainhtml','manifest','map-data','assets','zip',function(callBack){
+	console.log(callBack);
+});
+
 console.log("Build Complete ..............");
+
+
 
 	
 
