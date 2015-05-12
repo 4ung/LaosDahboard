@@ -72,18 +72,21 @@ $(function(){
 
 function router(){
 	$("a[data-rel='overview']").click(function(){
+		helper.DisableCache();
 		$("#container").load(window.DASHBOARD.BASE_URL+"/fragment/overview.html",function(){
 				console.log("load.done");
 		});
 	});
 
 	$("a[data-rel='MDG1']").click(function(){
+		helper.DisableCache();
 		$("#container").load(window.DASHBOARD.BASE_URL+"/fragment/MDG1.html",function(){
 			
 		});
 	});
 
 	$("a[data-rel='MDG4']").click(function(){
+		helper.DisableCache();
 		$("#container").load(window.DASHBOARD.BASE_URL+"/fragment/MDG4.html",function(){
 			
 		});

@@ -189,7 +189,7 @@ $(function(){
       //Call Method from  helper Library
       helper.loadData(window.DASHBOARD.MAP_PATH).done(function(mapdata){
         //window.DASHBOARD.MAP_DATA=mapdata;
-        mapHelper.mapBuilder("#Samplemap",Map1,mapdata);
+       // mapHelper.mapBuilder("#Samplemap",Map1,mapdata);
         //mapbuilder(data);
       });
     
