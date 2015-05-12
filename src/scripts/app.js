@@ -82,4 +82,10 @@ function router(){
 			
 		});
 	});
+
+	$("a[data-rel='MDG4']").click(function(){
+		$("#container").load(window.DASHBOARD.BASE_URL+"/fragment/MDG4.html",function(){
+			
+		});
+	});
 }
