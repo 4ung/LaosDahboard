@@ -91,4 +91,18 @@ function router(){
 			
 		});
 	});
+
+	$("a[data-rel='MDG5']").click(function(){
+		helper.DisableCache();
+		$("#container").load(window.DASHBOARD.BASE_URL+"/fragment/MDG5.html",function(){
+			
+		});
+	});
+
+	$("a[data-rel='MDG6']").click(function(){
+		helper.DisableCache();
+		$("#container").load(window.DASHBOARD.BASE_URL+"/fragment/MDG6.html",function(){
+			
+		});
+	});
 }
