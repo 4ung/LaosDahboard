@@ -1,0 +1,27 @@
+.content-wrapper(style='min-height:	242px;')
+					.container-fluid
+									//	Content	Header	(Page	header)
+									section.content-header
+											h1
+													|	MDG 4
+													small	&nbsp;
+											|													
+											//ol.breadcrumb
+													li
+															a(href='#')
+																	i.fa.fa-dashboard
+																	|		Home
+													|															
+													li.active	OverView
+									//	Main	content
+									section.content
+										.col-md-10
+											.box.box-primary
+												.box-header
+																i.fa.fa-bar-chart-o
+																|																			
+																h3.box-title	MDG Mortality Under 5
+																|																	
+														.box-body
+																#Chart1_MDG4(style='height:400px;')
+script(type="text/javascript" src="/js/fragments/MDG7.js")																	
