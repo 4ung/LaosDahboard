@@ -71,18 +71,51 @@ $(function(){
 });
 
 function router(){
-	$("a[data-rel='overview']").click(function(){
+	$("a").click(function(){
+		console.log($(this));
+		var route = $(this).attr("data-rel");
 		helper.DisableCache();
-		$("#container").load(window.DASHBOARD.BASE_URL+"/fragment/overview.html",function(){
-				console.log("load.done");
-		});
+		switch(route){
+			case 'overview':
+				
+				$("#container").load(window.DASHBOARD.BASE_URL+"/fragment/overview.html",function(){
+						//console.log("load.done");
+				});
+			break;
+			case 'MDG1':
+				$("#container").load(window.DASHBOARD.BASE_URL+"/fragment/MDG1.html",function(){
+			
+				});
+			break;
+			case 'MDG4':
+				$("#container").load(window.DASHBOARD.BASE_URL+"/fragment/MDG4.html",function(){
+			
+				});
+			break;
+			case 'MDG5':
+				$("#container").load(window.DASHBOARD.BASE_URL+"/fragment/MDG5.html",function(){
+			
+				});
+			break;
+			case 'MDG6':
+				$("#container").load(window.DASHBOARD.BASE_URL+"/fragment/MDG6.html",function(){
+			
+				});
+			break;
+			case 'MDG7':
+				$("#container").load(window.DASHBOARD.BASE_URL+"/fragment/MDG7.html",function(){
+			
+				});
+			break;
+		}
 	});
 
-	$("a[data-rel='MDG1']").click(function(){
+
+	
+
+	/*$("a[data-rel='MDG1']").click(function(){
 		helper.DisableCache();
-		$("#container").load(window.DASHBOARD.BASE_URL+"/fragment/MDG1.html",function(){
-			
-		});
+		
 	});
 
 	$("a[data-rel='MDG4']").click(function(){
@@ -105,4 +138,14 @@ function router(){
 			
 		});
 	});
+
+	$("a[data-rel='MDG7']").click(function(ctrl){
+		helper.DisableCache();
+		console.log($(this).attr("data-rel"));
+		$("#container").load(window.DASHBOARD.BASE_URL+"/fragment/MDG7.html",function(){
+			
+		});
+	});*/
+
+
 }
