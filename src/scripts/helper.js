@@ -91,7 +91,7 @@ var mapHelper={
                 layout: 'horizontal',
                 borderWidth: 0,
                 backgroundColor: 'rgba(255,255,255,0.85)',
-                floating: true,
+                floating: false,
                 verticalAlign: 'top',
                 y: 25
             },

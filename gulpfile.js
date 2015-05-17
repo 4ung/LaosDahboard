@@ -84,6 +84,9 @@ var run_squence=require('run-sequence');
 
 		gulp.src('./src/map-data/overview-map/*.*')
 		.pipe(gulp.dest('./build/map-data/overview-map/'))
+
+		gulp.src('./src/map-data/MDG5-map/*.*')
+		.pipe(gulp.dest('./build/map-data/MDG5-map/'))
 		
 		
 	});

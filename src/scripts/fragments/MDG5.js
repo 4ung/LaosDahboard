@@ -49,11 +49,36 @@ $(function(){
 			"ArraySeries":dataElements_Chart2_MDG5
 	};
 
+	var map1_MDG5={
+		Mapdatapath:"MDG5-map/Mdg5_Map1.json",
+        StringTitleText:"ANC 2014",
+        BooleanNavigation:true,
+        ColorMin:"#000",
+        ColorMax:"#232323",
+        ArrayChroplethRange:[
+                    [0, '#EFEFFF'],
+                    [0.6, '#4444FF'],
+                    [1, '#232323']
+                ],
+        BooleanDataLabels:true,
+        StringToolTip:"Data Label Tooltip",
+        StringTooltipFormat:"{point.name}: {point.value}"
+	};
+
+
+	loadmanifest().done(function(data){
+      window.DASHBOARD.MAP_PATH=window.DASHBOARD.BASE_URL+"/"+data.map_path+data.maps.LAOS_DISTRICT;
+      //Call Method from  helper Library
+      	helper.loadData(window.DASHBOARD.MAP_PATH).done(function(mapdata){
+            mapHelper.mapBuilder("#MAP1_MDG5",map1_MDG5,mapdata);
+  		});
+    
+  	});
 
 	chartHelper.BarChartBuilder("#Chart1_MDG5",chart1_MDG5);
 	chartHelper.BarChartBuilder("#Chart2_MDG5",chart2_MDG5);
 
-	var chart3_MDG5;
+	
 
 	
 });
