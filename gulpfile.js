@@ -101,7 +101,7 @@ var run_squence=require('run-sequence');
 		console.log("Zip Created......................................................................................");
 		return gulp.src('build/*')
 			.pipe(zip('upload.zip'))
-			.pipe(gulp.dest('src'));
+			.pipe(gulp.dest('~./home/Desktop'));
 	});
 
 
