@@ -49,6 +49,30 @@ $(function(){
 			"ArraySeries":dataElements_Chart2_MDG5
 	};
 
+	var categories_Chart3_MDG5=[
+		'1995','2000','2005','2010','2015'
+	];
+	var dataElements_Chart3_MDG5=[{
+									name:'Maternal Mortality Ratio',
+									data:[650,530,405,357,220]
+								},{
+									name:'Maternal Mortality Ration Target',
+									data:[300,300,300,300,300]
+								}];
+
+    var tooltip_Chart3='<b>{point.y:.1f} </b>';
+	var chart3_MDG5={
+			"StringType":"",
+			"StringTitle":"Maternal Mortality Ratio",
+			"StringSubtitle":"Source hmis.gov.la",
+			"ArrayXcategories":categories_Chart3_MDG5,
+			"StringYtitle":"",
+			"BooleanLegend":true,
+			"StringTooltip":tooltip_Chart3,
+			"ArraySeries":dataElements_Chart3_MDG5
+	};
+
+
 	var map1_MDG5={
 		Mapdatapath:"MDG5-map/Mdg5_Map1.json",
         StringTitleText:"ANC 2014",
@@ -127,6 +151,7 @@ $(function(){
 
 	chartHelper.BarChartBuilder("#Chart1_MDG5",chart1_MDG5);
 	chartHelper.BarChartBuilder("#Chart2_MDG5",chart2_MDG5);
+	chartHelper.BarChartBuilder("#Chart3_MDG5",chart3_MDG5);
 
 	
 
