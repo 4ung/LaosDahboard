@@ -21,51 +21,83 @@ var helper={
 
 var chartHelper={
 	"BarChartBuilder":function ChartBuilder(StringDivArea,ChartObject){
-		///<Ssummary>Simple Method to Build Simple Chart </summary>
-		///<param name="StringType">Chart Type</param>
-		///<param name="StringTitle">Chart Title</param>
-		///<param name="StringSubTitle">SubTitle of Chart</param>
-		///<param name="ArrayXcategories">Array for X axis [name,name,name,...]</param>
-		///<param name="StringYtitle">Text for Y Axis</param>
-		///<param name="BooleanLegend">Enable Legend (True,False)</param>
-		///<param name="StringTooltip">Tool Tip Text for each chart items can Include higharts Global Variable</param>
-		///<param name="ArraySeries">Chart items Array[{name:"",data:[]},...]</param>
-
-			$(StringDivArea).highcharts({
-			    chart: {
-			        type: ChartObject.StringType
-			    },
-			    title: {
-			        text: ChartObject.StringTitle
-			    },
-			    subtitle: {
-			        text: ChartObject.StringSubtitle
-			    },
-			    xAxis: {
-			        categories:ChartObject.ArrayXcategories
-			        /*labels: {
-			            rotation: -45,
-			            style: {
-			                fontSize: '13px',
-			                fontFamily: 'Verdana, sans-serif'
-			            }
-			        }*/
-			    },
-			    yAxis: {
-			        min: 0,
-			        
-			        title: {
-			            text: ChartObject.StringYtitle
-			        }
-			    },
-			    legend: {
-			        enabled: ChartObject.BooleanLegend
-			    },
-			    tooltip: {
-			        pointFormat: ChartObject.StringTooltip
-			    },
-			    series: ChartObject.ArraySeries
-			});
+			///<summary>Simple Method to Build Simple Chart </summary>
+			///<param name="StringType">Chart Type</param>
+			///<param name="StringTitle">Chart Title</param>
+			///<param name="StringSubTitle">SubTitle of Chart</param>
+			///<param name="ArrayXcategories">Array for X axis [name,name,name,...]	</param>
+			///<param name="StringYtitle">Text for Y Axis</param>
+			///<param name="BooleanLegend">Enable Legend (True,False)</param>
+			///<param name="StringTooltip">Tool Tip Text for each chart items can Include higharts Global Variable</param>
+			///<param name="ArraySeries">Chart items Array[{name:"",data:[]},...]	</param>
+				if(ChartObject.ArrayColors===undefined){
+						$(StringDivArea).highcharts({
+						    chart: {
+						        type: ChartObject.StringType
+						    },
+						    title: {
+						        text: ChartObject.StringTitle
+						    },
+						    subtitle: {
+						        text: ChartObject.StringSubtitle
+						    },
+						    xAxis: {
+						        categories:ChartObject.ArrayXcategories						        
+						    },
+						    yAxis: {
+						        min: 0,
+						        
+						        title: {
+						            text: ChartObject.StringYtitle
+						        }
+						    },
+						    legend: {
+						        enabled: ChartObject.BooleanLegend
+						    },
+						    tooltip: {
+						        pointFormat: ChartObject.StringTooltip
+						    },
+						    series: ChartObject.ArraySeries
+						});
+				}else{
+						$(StringDivArea).highcharts({
+						    chart: {
+						        type: ChartObject.StringType
+						    },
+						    colors:ChartObject.ArrayColors,
+						    title: {
+						        text: ChartObject.StringTitle
+						    },
+						    subtitle: {
+						        text: ChartObject.StringSubtitle
+						    },
+						    xAxis: {
+						        categories:ChartObject.ArrayXcategories
+						        /*
+						        labels: {
+						            rotation: -45,
+						            style: {
+						                fontSize: '13px',
+						                fontFamily: 'Verdana, sans-serif'
+						            }
+						        }
+						        */
+						    },
+						    yAxis: {
+						        min: 0,						        
+						        title: {
+						            text: ChartObject.StringYtitle
+						        }
+						    },
+						    legend: {
+						        enabled: ChartObject.BooleanLegend
+						    },
+						    tooltip: {
+						        pointFormat: ChartObject.StringTooltip
+						    },
+						    series: ChartObject.ArraySeries
+						});
+				}
 			}
 };
 
