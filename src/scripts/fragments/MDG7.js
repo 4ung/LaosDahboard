@@ -20,6 +20,7 @@ $(function(){
 			"StringTitle":"MDG7 safe drinking water  basic Sanitation",
 			"StringSubtitle":"Source hmis.gov.la",
 			"ArrayXcategories":categories_Chart1_MDG7,
+			"ArrayColors":['#00a2c5','#31ba64','#000'],
 			"StringYtitle":"",
 			"BooleanLegend":true,
 			"StringTooltip":tooltip_Chart1,

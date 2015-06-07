@@ -38,6 +38,69 @@ $(function(){
     
     chartHelper.BarChartBuilder("#Chart1_MDG4",Chart1_MDG4);
 
+        var tooltip_chart3='BCG Coverage in : <b>{point.y:.1f}';
+    var categoriesChart3=[
+        'BCG Coverage (BCG Given estimated\n live Birth)'
+    ];
+    var dataElementsChart3=[{
+
+        name: 'Oct 2010-Sept 2011',
+        data: [55.9]
+
+    },{
+        name:'Oct 2011-Sept 2012',
+        data:[59]
+    },{
+        name:'Oct 2012-Sept 2013',
+        data:[64]
+    },{
+        name:"Oct 2013-Sept 2014",
+        data:[74.2]
+    }
+    ];
+
+    var Chart3_MDG4={
+        "StringType":"column",
+    "StringTitle":"BCG COverage 2011-2014 ",
+    "StringSubtitle":"Source hmis.gov.la",
+    "ArrayXcategories":categoriesChart3,
+    "StringYtitle":"",
+    "BooleanLegend":true,
+    "StringTooltip":tooltip_chart3,
+    "ArrayColors":['#00a2c5','#31ba64','#851464','#ffa110'],
+    "ArraySeries":dataElementsChart3    };
+    
+    chartHelper.BarChartBuilder("#Chart3_MDG4",Chart3_MDG4);
+
+
+
+    var tooltip_chart4='<b>{point.y:.1f}';
+    var categoriesChart4=[
+        '2010','2011','2012','2013','2014'
+    ];
+    var dataElementsChart4=[{
+
+        name: 'Measles Coverage',
+        data: [43.5,47.8,54.2,58.5,62]
+
+    }
+    ];
+
+    var Chart4_MDG4={
+        "StringType":"",
+    "StringTitle":"Mesales Vaccine Coverage 2010-2014 ",
+    "StringSubtitle":"Source hmis.gov.la",
+    "ArrayXcategories":categoriesChart4,
+    "StringYtitle":"",
+    "BooleanLegend":true,
+    "StringTooltip":tooltip_chart4,
+    "ArrayColors":['#00a2c5','#31ba64','#2a2b2b','#000'],
+    "ArraySeries":dataElementsChart4    };
+    
+    chartHelper.BarChartBuilder("#Chart4_MDG4",Chart4_MDG4);
+
+
+
 
 var Map1={
         Mapdatapath:"MDG4-map/Mdg4_Map1.json",

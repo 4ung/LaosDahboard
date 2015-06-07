@@ -74,7 +74,7 @@ $(function(){
 			"StringTitle":"LAO PDR",
 			"StringSubtitle":"Source hmis.gov.la",
 			"ArrayXcategories":categories_Chart3_MDG6,
-			"ArrayColors":['#00a2c5','#000','#2a2b2b','#000'],
+			"ArrayColors":['#00a2c5','#000','#31ba64','#000'],
 			"StringYtitle":"",
 			"BooleanLegend":true,
 			"StringTooltip":tooltip_Chart3,
