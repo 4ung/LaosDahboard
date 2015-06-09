@@ -218,6 +218,8 @@ $(function(){
     chartHelper.BarChartBuilder("#Chart1",Chart1);
 
     chartHelper.BarChartBuilder("#Chart2",Chart2);
+
+    $("#table1_MDG1").dataTable();
     
 });
 
