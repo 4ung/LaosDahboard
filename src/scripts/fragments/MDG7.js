@@ -26,6 +26,7 @@ $(function(){
 			"StringTooltip":tooltip_Chart1,
 			"ArraySeries":dataElements_Chart1_MDG7
 	};
+	$("#table1_MDG7").dataTable();
 
 	chartHelper.BarChartBuilder("#Chart1_MDG7",chart1_MDG7);
 });

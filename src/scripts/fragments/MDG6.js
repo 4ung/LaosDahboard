@@ -1,25 +1,25 @@
 $(function(){
 	
 	var categories_Chart1_MDG6=[
-		'2009','2012','2014'
+		'2010','2012','2014'
 	];
 
 	var dataElements_Chart1_MDG6=[{
 									name:'MDG-HIV Prevalence among MSM 15-49 years',
-									data:[0,2.4,1.6]
+									data:[1.4,2.1,0.25]
 								},{
 									name:'MDG-HIV Prevalence among MSM 15-24 (%) years total',
-									data:[0,1.2,2]
+									data:[1.2,2.4,0.28]
 								},
 								{
 									name:'MDG-HIV Prevalence among MSM 15-24 (%) years total',
-									data:[0,0.28,0.29]
+									data:[1.4,1.6,0.29]
 								}];
 	var tooltip_Chart1='<b>{point.y:.1f} </b>';
 
 	var chart1_MDG6={
-			"StringType":"",
-			"StringTitle":"HIV Prevalence Among \nGeneral Population and Risk Groups",
+			"StringType":"column",
+			"StringTitle":"Trends of HIV Prevalence ",
 			"StringSubtitle":"Source hmis.gov.la",
 			"ArrayXcategories":categories_Chart1_MDG6,
 			"ArrayColors":['#00a2c5','#ffa110','#9b74b6'],
@@ -69,7 +69,7 @@ $(function(){
 	var tooltip_Chart3='<b>{point.y:.1f} </b>';
 
 	var chart3_MDG6={
-			"StringType":"",
+			"StringType":"column",
 			"StringTitle":"MDG ARV Trend Annual",
 			"StringSubtitle":"Source hmis.gov.la",
 			"ArrayXcategories":categories_Chart3_MDG6,
