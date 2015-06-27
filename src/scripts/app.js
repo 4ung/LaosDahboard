@@ -61,8 +61,8 @@ $(function(){
 		
 	});
 
-	ChartBuilder();
-	makeDonutChart();
+	//ChartBuilder();
+	//makeDonutChart();
 
 	router();
 

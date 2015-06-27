@@ -195,7 +195,7 @@ $(function(){
     
   });
 
-  ChartBuilder();
+  //ChartBuilder();
   
-  makeDonutChart();
+  //makeDonutChart();
 });
