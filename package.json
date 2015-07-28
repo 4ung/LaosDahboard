@@ -1,0 +1,29 @@
+{
+  "name": "Dashboard",
+  "version": "0.0.1",
+  "description": "Dasboard",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DHIS/LaosDahboard.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/DHIS/LaosDahboard/issues"
+  },
+  "devDependencies": {
+    "del": "^1.2.0",
+    "gulp-clean": "^0.3.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^1.11.0",
+    "gulp-minify-css": "^1.2.0",
+    "gulp-sass": "^2.0.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-zip": "^3.0.2",
+    "run-sequence": "^1.1.1"
+  }
+}

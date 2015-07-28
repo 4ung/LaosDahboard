@@ -1,0 +1,113 @@
+head
+	meta(charset='utf-8')
+	meta(name='viewport', content='width=device-width, initial-scale=1.0')
+	meta(name='description', content='To Show the MDG status of Laos')
+	meta(name='Ministry of Health Laos', content='LaosMDG')
+	meta(name='keyword', content='Dashboard, Laos, MDG, Dashboard, Laos, Dashboard, Fluid, Retina')
+title  Laos MDG Dashboard
+// Global component path
+-var bower_path="assets/bower_components/"
+-var dashgum_path="dashgum-template/assets/"
+-var ionicicons_path="ionicons/"
+-var highcharts_path="highcharts/"
+-var highmaps_path="highmaps/"
+-var adminlte_path=["admin-lte/","admin-lte/bootstrap/","admin-lte/dist/","admin-lte/plugins/","admin-lte/font-awesome/"]
+
+	link(href=bower_path+adminlte_path[1]+'css/bootstrap.css', rel='stylesheet')
+	link(href=bower_path+ionicicons_path+'css/ionicons.css', rel='stylesheet')
+	link(href=bower_path+adminlte_path[4]+'css/font-awesome.css', rel='stylesheet')
+	link(href=bower_path+adminlte_path[3]+'datatables/bootstrap.css', rel='stylesheet')
+	link(href=bower_path+adminlte_path[2]+'css/AdminLTE.min.css', rel='stylesheet')
+	link(href=bower_path+adminlte_path[2]+'css/skins/_all-skins.min.css', rel='stylesheet')
+	// external css	
+	link(type="text/css" ,rel="stylesheet" ,href="css/style.css")
+	script(src=bower_path+dashgum_path+'js/jquery.js')
+	script(src=bower_path+dashgum_path+'js/jquery-1.8.3.min.js')
+	script(src=bower_path+dashgum_path+'js/bootstrap.min.js')
+
+	.wrapper
+				header.main-header
+								nav.navbar.navbar-static-top
+										.container-fluid
+												.navbar-header
+														a.navbar-brand(href='../../index2.html')
+																b	Laos MDG
+																|	DashBoard
+														|													
+														button.navbar-toggle.collapsed(type='button',	data-toggle='collapse',	data-target='#navbar-collapse')
+																i.fa.fa-bars
+												//	Collect	the	nav	links,	forms,	and	other	content	for	toggling
+												#navbar-collapse.collapse.navbar-collapse
+														ul.nav.navbar-nav
+																li.active
+																		a(href='#' data-rel="overview")
+																				|	Overview	
+																				span.sr-only	(current)
+																|															
+																li
+																		a(href='#' data-rel="MDG1")	MDG 1
+																|															
+																li
+																		a(href='#' data-rel="MDG4")	MDG 4
+																|															
+																li
+																		a(href="#" data-rel="MDG5") MDG 5
+																|															
+																li
+																		a(href="#" data-rel="MDG6") MDG 6
+																|																
+																li																
+																		a(href="#" data-rel="MDG7") MDG 7
+																|														
+																//li.dropdown
+																		a.dropdown-toggle(href='#',	data-toggle='dropdown')
+																				|	Dropdown	
+																				span.caret
+																		|																	
+																		ul.dropdown-menu(role='menu')
+																				li
+																						a(href='#')	Action
+																				|																			
+																				li
+																						a(href='#')	Another	action
+																				|																			
+																				li
+																						a(href='#')	Something	else	here
+																				|																			
+																				li.divider
+																				|																			
+																				li
+																						a(href='#')	Separated	link
+																				|																			
+																				li.divider
+																				|																			
+																				li
+																						a(href='#')	One	more	separated	link
+														|													
+														form.navbar-form.navbar-right(role='search')
+																.form-group
+																		input#navbar-search-input.form-control(type='text',	placeholder='Search Within Dashboard')
+														|													
+														//ul.nav.navbar-nav.navbar-right
+																li
+																		a(href='#')	Link
+																|															
+																li.dropdown
+																		a.dropdown-toggle(href='#',	data-toggle='dropdown')
+																				|	Dropdown	
+																				span.caret
+																		|																	
+																		ul.dropdown-menu(role='menu')
+																				li
+																						a(href='#')	Action
+																				|																			
+																				li
+																						a(href='#')	Another	action
+																				|																			
+																				li
+																						a(href='#')	Something	else	here
+																				|																			
+																				li.divider
+																				|																			
+																				li
+																						a(href='#')	Separated	link
