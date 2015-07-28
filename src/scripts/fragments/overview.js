@@ -185,11 +185,13 @@ $(function(){
   helper.DisableCache();
   /*Loading GLobal Variables*/
   loadmanifest().done(function(data){
-      window.DASHBOARD.MAP_PATH=window.DASHBOARD.BASE_URL+"/"+data.map_path+data.maps.LAOS;
+      window.DASHBOARD.MAP_PATH=window.DASHBOARD.BASE_URL+"/"+data.map_path+data.maps.LAOS_ORIGINAL;
       //Call Method from  helper Library
       helper.loadData(window.DASHBOARD.MAP_PATH).done(function(mapdata){
         //window.DASHBOARD.MAP_DATA=mapdata;
+        //console.log(mapdata);
         mapHelper.mapBuilder_LatLong("#Samplemap",mapdata);
+
         //mapbuilder(data);
       });
     

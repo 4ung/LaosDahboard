@@ -3,6 +3,7 @@
 	"PAGES":["MDG1","MDG2","MDG3","MDG4"],
 	"map_path":"map-data/",
 	"maps":{"LAOS":"lao-map-all.json",
+			"LAOS_ORIGINAL":"lao-map-original.json",
 			"LAOS_DISTRICT":"lao-map-all-lv2.json",
 			"US":"us-map-all.json",
 			"USA":"us.js"
