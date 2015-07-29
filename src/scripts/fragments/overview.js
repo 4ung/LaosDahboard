@@ -186,18 +186,23 @@ $(function(){
   /*Loading GLobal Variables*/
   loadmanifest().done(function(data){
       window.DASHBOARD.MAP_PATH=window.DASHBOARD.BASE_URL+"/"+data.map_path+data.maps.LAOS_ORIGINAL;
+      window.DASHBOARD.HOSPITAL_MAP=window.DASHBOARD.BASE_URL+"/"+data.map_path+data.overview_map_path+data.maps.LAOS_HOSPITAL;
+console.log(window.DASHBOARD.BASE_URL+"/"+data.map_path+data.maps.overview_map_path+data.LAOS_HOSPITAL);
+
       //Call Method from  helper Library
       helper.loadData(window.DASHBOARD.MAP_PATH).done(function(mapdata){
-        //window.DASHBOARD.MAP_DATA=mapdata;
+        result_mapdata=mapdata;
+
+        helper.loadData(window.DASHBOARD.HOSPITAL_MAP).done(function(hospitalmap){
+            mapHelper.mapBuilder_LatLong("#Samplemap",result_mapdata,mapHelper.icon_map_converter(hospitalmap));
+        });
         //console.log(mapdata);
-        mapHelper.mapBuilder_LatLong("#Samplemap",mapdata);
+        //mapHelper.mapBuilder_LatLong("#Samplemap",mapdata);
 
         //mapbuilder(data);
       });
     
   });
 
-  //ChartBuilder();
   
-  //makeDonutChart();
 });

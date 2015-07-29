@@ -35,47 +35,48 @@ var run_squence=require('run-sequence');
 	//Javascript
 	gulp.task('Javascript',['clean'], function() {
 	  gulp.src(path.jspath)
-	    .pipe(jshint())
-	    .pipe(uglify())
-	    .pipe(gulp.dest('build/js/'))
-	    .pipe(jshint.reporter('default'));
+	    //.pipe(jshint())
+	    //.pipe(uglify())
+	    .pipe(gulp.dest('build/js/'));
+	    //.pipe(jshint.reporter('default'));
 	});
 	gulp.task('FragmentJavascript',['clean'], function() {
 	  gulp.src(path.fragmentjspath)
-	    .pipe(jshint())
-	    .pipe(uglify())
-	    .pipe(gulp.dest('build/js/fragments/'))
-	    .pipe(jshint.reporter('default'));
+	    //.pipe(jshint())
+	    //.pipe(uglify())
+	    .pipe(gulp.dest('build/js/fragments/'));
+	    //.pipe(jshint.reporter('default'));
 	});
 	//css 
-	gulp.task('style',['clean'], function() {
+	gulp.task('style', function() {
 	  gulp.src(path.sasspath)
 	    .pipe(sass())
 	    .pipe(minifyCSS())
-	    .pipe(gulp.dest('build/css/'))
-	    .pipe(jshint.reporter('default'));
+	    .pipe(sass.sync().on('error', sass.logError))
+	    .pipe(gulp.dest('build/css/'));
+	    //.pipe(jshint.reporter('default'));
 	});
 
 	//tab fragment
 	gulp.task('fragments',['clean'],function(){
 		gulp.src('./src/html/fragments/*.jade')
 		.pipe(jade())
-		.pipe(gulp.dest('build/fragment/'))
-		.pipe(jshint.reporter('default'));
+		.pipe(gulp.dest('build/fragment/'));
+		//.pipe(jshint.reporter('default'));
 	});
 	//main html
 	gulp.task('mainhtml',['clean'],function(){
 		gulp.src('./src/html/*.jade')
 		.pipe(jade())
-		.pipe(gulp.dest('build/'))
-		.pipe(jshint.reporter('default'));
+		.pipe(gulp.dest('build/'));
+		//.pipe(jshint.reporter('default'));
 	});
 	//manifst
 	gulp.task('manifest',['clean'],function(){
 		gulp.src('./src/*.manifest')
 		
-		.pipe(gulp.dest('build/'))
-		.pipe(jshint.reporter('default'));
+		.pipe(gulp.dest('build/'));
+		//.pipe(jshint.reporter('default'));
 	});
 
 	gulp.task('map-data',['clean'],function(){
@@ -119,7 +120,7 @@ var run_squence=require('run-sequence');
 		gulp.watch('./src/**/*.js',['Javascript']);
 		gulp.watch(path.fragmentjspath,['FragmentJavascript']);
 
-		//gulp.watch('./src/**/*.sass',['style']);
+		gulp.watch('./src/**/*.sass',['style']);
 		gulp.watch('./src/**/*.jade',['fragments']);
 		gulp.watch(path.mainindexpath,['mainhtml']);		      
 		gulp.watch('./src/**/*.manifest',['manifest']);
