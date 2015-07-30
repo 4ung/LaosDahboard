@@ -187,7 +187,7 @@ $(function(){
   loadmanifest().done(function(data){
       window.DASHBOARD.MAP_PATH=window.DASHBOARD.BASE_URL+"/"+data.map_path+data.maps.LAOS_ORIGINAL;
       window.DASHBOARD.HOSPITAL_MAP=window.DASHBOARD.BASE_URL+"/"+data.map_path+data.overview_map_path+data.maps.LAOS_HOSPITAL;
-console.log(window.DASHBOARD.BASE_URL+"/"+data.map_path+data.maps.overview_map_path+data.LAOS_HOSPITAL);
+//console.log(window.DASHBOARD.BASE_URL+"/"+data.map_path+data.maps.overview_map_path+data.LAOS_HOSPITAL);
 
       //Call Method from  helper Library
       helper.loadData(window.DASHBOARD.MAP_PATH).done(function(mapdata){

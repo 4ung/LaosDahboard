@@ -260,22 +260,28 @@ var mapHelper={
 						}
 					}
 				}
-				if(arr_district_typeA.length!=0)
+				console.log(arr_health_center.length);
+				if(arr_district_typeA.length!=0){
 					Obj_district_type_A.data=arr_district_typeA;
 					map_icons.push(Obj_district_type_A);
-				if(arr_district_typeB.length!=0)
+				}
+				if(arr_district_typeB.length!=0){
 					Obj_district_type_B.data=arr_district_typeB;
 					map_icons.push(Obj_district_type_B);
-				if(arr_health_center.length!=0)
+				}
+				if(arr_health_center.length!=0){
 					Obj_health_center.data=arr_health_center;
 					map_icons.push(Obj_health_center);
-				if(arr_province_hospital.length!=0)
+				}
+				if(arr_province_hospital.length!=0){
 					Obj_province_hospital.data=arr_province_hospital;
 					map_icons.push(Obj_province_hospital);
-				console.log(Obj_province_hospital);
-				if(arr_central_hospital.length!=0)
+				}
+					//console.log(Obj_province_hospital);
+				if(arr_central_hospital.length!=0){
 					Obj_central_hospital.data=arr_central_hospital;
 					map_icons.push(Obj_central_hospital);
+				}
 
 				return map_icons;
 
